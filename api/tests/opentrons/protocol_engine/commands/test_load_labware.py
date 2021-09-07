@@ -5,7 +5,7 @@ from opentrons.types import DeckSlotName
 from opentrons.protocols.models import LabwareDefinition
 from opentrons.protocol_engine.types import DeckSlotLocation
 from opentrons.protocol_engine.execution import (
-    LoadedLabware,
+    LoadedLabwareData,
     EquipmentHandler,
     MovementHandler,
     PipettingHandler,
@@ -50,7 +50,7 @@ async def test_load_labware_implementation(
             labware_id=None,
         )
     ).then_return(
-        LoadedLabware(
+        LoadedLabwareData(
             labware_id="labware-id",
             definition=well_plate_def,
             calibration=(1, 2, 3),
