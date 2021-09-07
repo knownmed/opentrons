@@ -37,7 +37,7 @@ module.exports = {
     oneClick: false,
   },
   linux: {
-    target: ['AppImage'],
+    target: [{target: 'AppImage', arch: 'arm64'}],
     executableName: 'opentrons',
     category: 'Science',
   },

@@ -93,7 +93,7 @@ dist-osx: package-deps
 
 .PHONY: dist-linux
 dist-linux: package-deps
-	$(builder) --linux
+	$(builder) --linux --arm64
 	$(MAKE) _dist-collect-artifacts
 
 .PHONY: dist-win
